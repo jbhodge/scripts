@@ -44,3 +44,9 @@ if [ "`lsb_release -is`" == "RedHat" ] || [ "`lsb_release -is`" == "CentOS" ]
 		#open a browser to check for functionality
 		echo "Would you like to open a browser to verify the server is running? (yes or no): "
 		read WEBANSWER
+			if [ ${WEBANSWER} == "yes" ] || [ ${WEBANSWER} == "y" ]
+					then
+						python -mwebbrowser http://127.0.0.1:8080
+			fi
+
+		echo "Installation Complete"
