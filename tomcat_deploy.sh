@@ -50,3 +50,6 @@ if [ "`lsb_release -is`" == "RedHat" ] || [ "`lsb_release -is`" == "CentOS" ]
 			fi
 
 		echo "Installation Complete"
+fi 
+echo "This is not a supported operating system"
+exit 1
