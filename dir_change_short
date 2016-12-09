@@ -1,0 +1,15 @@
+#cd up to n dirs
+#using: cd..10 cd..dir
+#place in .bashrc file
+
+function cd_up() {
+        case $1 in
+                *[!0-9])
+                cd $( pwd | sed -r "s|(.*/$1[^/]*/).*|\1|" )
+                ;;
+        *)
+          	cd $(printf "%0.0s../" $(seq 1 $1));
+                ;;
+        esac
+}
+alias 'cd..'='cd_up'
