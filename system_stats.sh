@@ -1,4 +1,5 @@
 #!/bin/bash
+#place script in crontab for automated daily/hourly/etc messaging.
 
 function system_stats() {
 
